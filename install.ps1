@@ -4,8 +4,8 @@
 
 $ErrorActionPreference = 'Stop'
 $Base = 'https://api.deepseek.com/anthropic'
-$Big = 'deepseek-v4-pro[1m]'
-$Small = 'deepseek-flash'
+$Big = 'deepseek-flash[1m]'
+$Small = 'deepseek-flash[1m]'
 
 try { [Net.ServicePointManager]::SecurityProtocol = [Net.ServicePointManager]::SecurityProtocol -bor [Net.SecurityProtocolType]::Tls12 } catch { }
 
@@ -113,6 +113,6 @@ if ([Environment]::GetEnvironmentVariable('ANTHROPIC_API_KEY', 'User')) {
 }
 
 Write-Host "`nDone." -ForegroundColor Green
-Write-Host "  Model: $Big  (background tasks use $Small)"
+Write-Host "  Model: deepseek-flash[1m]"
 Write-Host "`nNEXT: close this window, open a new PowerShell window, then run:" -ForegroundColor Yellow
 Write-Host '  claude' -ForegroundColor Cyan
