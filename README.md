@@ -44,11 +44,11 @@ Nine settings in your Windows user account:
 |---|---|
 | `ANTHROPIC_BASE_URL` | `https://api.deepseek.com/anthropic` |
 | `ANTHROPIC_AUTH_TOKEN` | your DeepSeek key |
-| `ANTHROPIC_MODEL` | `deepseek-v4-pro` |
-| `ANTHROPIC_DEFAULT_OPUS_MODEL` | `deepseek-v4-pro` |
-| `ANTHROPIC_DEFAULT_SONNET_MODEL` | `deepseek-v4-pro` |
-| `ANTHROPIC_DEFAULT_HAIKU_MODEL` | `deepseek-v4-flash` |
-| `CLAUDE_CODE_SUBAGENT_MODEL` | `deepseek-v4-flash` |
+| `ANTHROPIC_MODEL` | `deepseek-v4-pro[1m]` |
+| `ANTHROPIC_DEFAULT_OPUS_MODEL` | `deepseek-v4-pro[1m]` |
+| `ANTHROPIC_DEFAULT_SONNET_MODEL` | `deepseek-v4-pro[1m]` |
+| `ANTHROPIC_DEFAULT_HAIKU_MODEL` | `deepseek-flash` |
+| `CLAUDE_CODE_SUBAGENT_MODEL` | `deepseek-flash` |
 | `CLAUDE_CODE_EFFORT_LEVEL` | `max` |
 | `CLAUDE_CODE_AUTO_COMPACT_WINDOW` | `786432` |
 
@@ -83,7 +83,7 @@ irm https://raw.githubusercontent.com/junaid-82/claude-code-deepseek/main/uninst
 ```powershell
 $h = @{ Authorization = "Bearer $env:ANTHROPIC_AUTH_TOKEN"; 'anthropic-version' = '2023-06-01' }
 Invoke-RestMethod "$env:ANTHROPIC_BASE_URL/v1/messages" -Method Post -Headers $h -ContentType 'application/json' `
-  -Body '{"model":"deepseek-v4-flash","max_tokens":32,"messages":[{"role":"user","content":"Say PONG"}]}'
+  -Body '{"model":"deepseek-flash","max_tokens":32,"messages":[{"role":"user","content":"Say PONG"}]}'
 ```
 
 ---

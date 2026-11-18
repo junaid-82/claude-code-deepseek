@@ -4,8 +4,8 @@
 
 $ErrorActionPreference = 'Stop'
 $Base = 'https://api.deepseek.com/anthropic'
-$Big = 'deepseek-v4-pro'
-$Small = 'deepseek-v4-flash'
+$Big = 'deepseek-v4-pro[1m]'
+$Small = 'deepseek-flash'
 
 try { [Net.ServicePointManager]::SecurityProtocol = [Net.ServicePointManager]::SecurityProtocol -bor [Net.SecurityProtocolType]::Tls12 } catch { }
 
